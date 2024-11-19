@@ -65,33 +65,33 @@ spec:
         - name: PDU_TYPE
           value: IPv4
         - name: SD
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_0
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_1
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_2
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_C
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_D
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SD_R
-          value: "0x000001"
+          value: "{TOBECONFIGURED}"
         - name: SST
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_0
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_1
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_2
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_C
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_D
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: SST_R
-          value: "1"
+          value: "{TOBECONFIGURED}"
         - name: TAC
           value: "0x00001"
 
