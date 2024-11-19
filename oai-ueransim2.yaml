@@ -29,7 +29,7 @@ spec:
         - name: AMF_VALUE
           value: "8000"
         - name: APN
-          value: "two"
+          value: "{TOBECONFIGURED}"
         - name: GNB_IP_ADDRESS
           value: "172.21.70.143"
         - name: GTP_IP
