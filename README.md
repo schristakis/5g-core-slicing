@@ -10,12 +10,24 @@ In this project you are asked to deploy a fully-operational 5G network using Ope
 
 ## Getting Started
 
+Clone this repository in your VM 29 (ssh cell@132.227.122.29) to access the files that we have already prepared for you:
+```
+ssh cell@132.227.122.29
+https://github.com/schristakis/5g-core-slicing.git
+```
+Go into the directory and execute the following command to initialize kubernetes cluster and depedencies. !!!WAIT UNITL THE SCRIPT IS DONE!!:
+```
+bash init.sh
+```
+After this script finishes continue by installing helm with the following command:
+```
+bash get_helm.sh
+```
+
+
+
 The first step is to deploy the 5G Core Network.
 
-Clone this repository in your VM to access the files that we have already prepared for you:
-```
-git clone https://gitlab.com/schristakis1/5g-amf-scaling.git
-```
 
 
 Go inside the the folder that you have just cloned and study the files and more specifically the folder oai-5g-core and oai-ueransim.yaml.
@@ -26,7 +38,7 @@ Go inside the the folder that you have just cloned and study the files and more 
 ```
 cd 5g-amf-scaling/oai-5g-core
 ```
-In orde to deploy each function you have to execute the following command for each core network function:
+In order to deploy each function you have to execute the following command for each core network function:
 
 ```
 helm install {network_function_name} {path_of_network_function}
