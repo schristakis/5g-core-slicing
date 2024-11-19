@@ -6,7 +6,15 @@ For help and information for this project refer to this email : Sokratis.Christa
 
 ## Overview
 
-In this project you are asked to deploy a fully-operational 5G network using OpenAirInterface(OAI) and Kubernetes. Using Kubernetes means that your different network functions will run as independent containers(Docker) within a microservices environment provided by Kubernetes. The goal of this project is to observe the deployed User Equipments (UEs) that are entering the network. Based on that number, you are asked to scale the number of AMF instances that deal with these new UE subscriptions.
+The objective of this project is to design and implement a network architecture that connects two distinct User Equipments (UEs) using UERANSIM instances within the network. The architecture will ensure that:
+
+First UERANSIM Connection:
+The first UE (UERANSIM1) is connected to the first User Plane Function (UPF1), establishing a functional communication path.
+
+Second UERANSIM and UPF Integration:
+A second UE (UERANSIM2) will be deployed and connected to a newly deployed  User Plane Function (UPF2).
+
+This design will ensure that each UERANSIM instance is independently linked to its respective UPF, demonstrating the 5G Core slicing.
 
 ## Getting Started
 
@@ -101,14 +109,11 @@ If the ping command works, it means that you have successfully deployed a 5G net
 
 ## Project goal
 
-As previously mentioned you will have to extend this architecture to connect multiple UEs in the network(hint: oai-ueransim.yaml file) and by doing so, you should be able to see multiple uesimtun* interfaces and not only one like in the example before. Then you will have to change the number of UEs for the values that are in the number_of_ues.txt file. Originally  your network will have only one AMF function, but if the number of UEs is high you will have to scale the AMF deployment to deal with the extra UEs.
+As previously mentioned you will have to extend this architecture to connect two different  UEs (i.e. UERANSIMs) in the network. The first UE if you did it right is already created and is connected to the first UPF. You then have to deploy a second UPF and also a second UERANSIM and connect them together. All in all the first UERANSIM1 will be connceted to UPF1 and the second UERANSIM2 will be connected to UPF2.
 
-Hint: The files you will have to modify are the oai-ueransim.yaml (increase/decrease number of UEs) and manually scale the AMF intances.
-It is on you whether to create a script to monitor the number of UEs and scale the AMF instances accordingly.
+- Hint1: The files you will need to check are the ones of the oai-ueransim1.yaml,oai-ueransim2.yaml,smf/config-file,upf2/config-file
+- Hint2: The slicing uses 3 key values: sst,sd and dnn. The first UE1 has already matched these values with the SMF and the UPF1. In order to achieve the goal of this project youw will have to modify files to match the 2nd UE2 to the second UPF2 (eventually and the SMF) by matching those 3 key parameters.
 
-
-The scaling should work as follows:
-
-- if number_of_ues <= 5  --> 1 AMF instances
-- if number_of_ues 5 < number_of_ues <= 10  --> 2 AMF instances
-- if number_of_ues 10 < number_of_ues --> 3 AMF instances
+To test if your project is working:
+1) ping from UE1 -> UPF1 and test if you have connectivity
+2) ping from UE2 -> UPF2 and test if you have connectivity
