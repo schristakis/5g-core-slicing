@@ -1,4 +1,4 @@
-# 5g-core-slicing
+# 5G Core Slicing for Adaptive Service Quality Based on Latency and Throughput Requirements
 
 ## Contact
 
