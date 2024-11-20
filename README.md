@@ -112,7 +112,7 @@ If the ping command works, it means that you have successfully deployed a 5G net
 As previously mentioned you will have to extend this architecture to connect two different  UEs (i.e. UERANSIMs) in the network. The first UE if you did it right is already created and is connected to the first UPF. You then have to deploy a second UPF and also a second UERANSIM and connect them together. All in all the first UERANSIM1 will be connceted to UPF1 and the second UERANSIM2 will be connected to UPF2.
 
 - Hint1: The files you will need to check are the ones of the oai-ueransim1.yaml,oai-ueransim2.yaml,smf/config-file,upf2/config-file
-- Hint2: The slicing uses 3 key values: sst,sd and dnn. The first UE1 has already matched these values with the SMF and the UPF1. In order to achieve the goal of this project youw will have to modify files to match the 2nd UE2 to the second UPF2 (eventually and the SMF) by matching those 3 key parameters.
+- Hint2: The slicing uses 3 key values: SST, SD, and DNN(or APN). The first UE1 has already matched these values with the SMF and the UPF1. In order to achieve the goal of this project you will have to modify files to match the 2nd UE2 to the second UPF2 (eventually and the SMF) by matching those 3 key parameters.
 
 To test if your project is working:
 1) ping from UE1 -> UPF1 and test if you have connectivity
